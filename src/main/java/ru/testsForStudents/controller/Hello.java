@@ -14,4 +14,14 @@ public class Hello {
         return "greeting";
     }
 
+    @GetMapping("/registration")
+    public String registration(Model model){
+        return "registration";
+    }
+
+    @GetMapping("/index")
+    public String index(Model model){
+        return "index";
+    }
+
 }
