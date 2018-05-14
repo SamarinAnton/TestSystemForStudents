@@ -6,5 +6,5 @@ import ru.testsForStudents.entity.User;
 
 import java.util.List;
 
-public interface UserDAO extends CrudRepository<BaseEntity, Long>{
+public interface UserDAO extends CrudRepository<User, Long>{
 }

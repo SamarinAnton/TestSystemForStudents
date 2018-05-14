@@ -4,16 +4,16 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "students", schema = "TestSystem")
-public class Student implements Serializable{
-    private User user;
+@Table(name = "teachers", schema = "TestSystem")
+public class Teacher implements Serializable {
     private long id;
     private String firstName;
     private String lastName;
+    private User user;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long getId() {
         return id;
     }
@@ -22,8 +22,9 @@ public class Student implements Serializable{
         this.id = id;
     }
 
+
     @Basic
-    @Column(name = "first_name", nullable = false)
+    @Column(name = "first_name", nullable = false, length = 45)
     public String getFirstName() {
         return firstName;
     }
@@ -32,8 +33,9 @@ public class Student implements Serializable{
         this.firstName = firstName;
     }
 
+
     @Basic
-    @Column(name = "last_name", nullable = false)
+    @Column(name = "last_name", nullable = false, length = 45)
     public String getLastName() {
         return lastName;
     }
@@ -54,11 +56,11 @@ public class Student implements Serializable{
 
     @Override
     public String toString() {
-        return "Student{" +
-                ", id=" + id +
+        return "Teacher{" +
+                "id=" + id +
                 ", first name='" + firstName + '\'' +
-                ", last name='" + lastName + '\'' +
-                "user=" + user +
+                ", last name=" + lastName +
+                ", user=" + user +
                 '}';
     }
 }

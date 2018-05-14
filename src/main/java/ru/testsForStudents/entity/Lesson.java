@@ -1,10 +1,11 @@
 package ru.testsForStudents.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "lessons", schema = "TestSystem")
-public class Lesson {
+public class Lesson implements Serializable {
     private long id;
     private String subject;
 
