@@ -5,25 +5,13 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "users", schema = "TestSystem")
-public class User implements Serializable{
+public class User extends BaseEntity implements Serializable{
 
     public enum Status {STUDENT, TEACHER}
 
-    private long id;
     private String login;
     private String password;
     private Status status;
-
-    @Id
-    @Column(name = "id", nullable = false)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
 
     @Basic
     @Column(name = "login", nullable = false, unique = true)
