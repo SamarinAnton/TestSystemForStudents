@@ -14,15 +14,8 @@ public class Hello {
         return "greeting";
     }
 
-    @GetMapping("/registration")
-    public String registration(Model model){
-        return "registration";
-    }
 
-    @GetMapping("/index")
-    public String index(Model model){
-        return "index";
-    }
+
 
     @GetMapping("/index2")
     public String index2(Model model){

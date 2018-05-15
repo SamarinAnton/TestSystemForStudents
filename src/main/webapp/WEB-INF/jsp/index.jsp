@@ -8,11 +8,11 @@
   <meta name="keywords" content="разные, ключевые, слова">
   <link rel="shortcut icon" href="#" />
 
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/fonts.css" />
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/reset.css">
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/normalize.css">
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
-  <link rel="stylesheet" href="${pageContext.request.contextPath}/css/media.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/fonts.css" />
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reset.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/normalize.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/main.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/media.css">
 
   <title>Авторизація в системі - Система тестування НАУ</title>
 </head>

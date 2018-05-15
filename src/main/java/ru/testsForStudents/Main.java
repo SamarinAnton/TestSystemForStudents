@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import ru.testsForStudents.DAO.UserDAO;
-import ru.testsForStudents.entity.BaseEntity;
-import ru.testsForStudents.entity.Student;
 import ru.testsForStudents.entity.User;
 
 @Controller    // This means that this class is a Controller
@@ -28,29 +26,21 @@ public class Main {
         // @ResponseBody means the returned String is the response, not a view name
         // @RequestParam means it is a parameter from the GET or POST request
 
-        BaseEntity baseEntity;
         User user = new User();
         user.setLogin(login);
         user.setPassword(password);
         if(groupUser.equalsIgnoreCase("teacher")){
             user.setStatus(User.Status.TEACHER);
-            baseEntity = user;
         } else {
             user.setStatus(User.Status.STUDENT);
-            Student student = new Student();
-            student.setUser(user);
-            student.setFirstName(name);
-            student.setLastName(surname);
-            student.setUserId(user.getId());
-            baseEntity = student;
         }
-        userDAO.save(baseEntity);
+        userDAO.save(user);
         return "Saved";
     }
 
     @GetMapping(path="/all")
-    public @ResponseBody Iterable<BaseEntity> getAllUsers() {
-        Iterable<BaseEntity> iterable = userDAO.findAll();
+    public @ResponseBody Iterable<User> getAllUsers() {
+        Iterable<User> iterable = userDAO.findAll();
         return iterable;
     }
 }
