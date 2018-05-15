@@ -20,7 +20,7 @@
 <body>
 <!-- HEADER -->
 <header class="header">
-  <h1 class="title">Авторизація в системі</h1>
+  <h1 class="title">${title}</h1>
 </header>
 
 <div class="main">
@@ -36,7 +36,7 @@
     </div>
     <div class="form-fild">
       <a href="#" class="button button_ytheme">Вхід</a>
-      <a href="./registration.html" class="button button_btheme">Реєстрація</a>
+      <a href="../../resources/templates/registration.html" class="button button_btheme">Реєстрація</a>
     </div>
   </form>
 

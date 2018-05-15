@@ -24,4 +24,10 @@ public class Hello {
         return "index";
     }
 
+    @GetMapping("/index2")
+    public String index2(Model model){
+        model.addAttribute("title", "Авторизація в системі");
+        return "index2";
+    }
+
 }
