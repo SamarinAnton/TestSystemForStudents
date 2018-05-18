@@ -25,7 +25,7 @@
 
 <div class="main">
 
-  <form action="#">
+  <form action="${pageContext.request.contextPath}/verification">
     <div class="form-fild">
       <label for="login">Логін</label>
       <input type="text" name="login" id="login">
@@ -35,10 +35,10 @@
       <input type="password" name="password" id="password">
     </div>
     <div class="form-fild">
-      <a href="#" class="button button_ytheme">Вхід</a>
-      <a href="${pageContext.request.contextPath}/registration" class="button button_btheme">Реєстрація</a>
+      <input type="submit" value="Вхід" class="button button_ytheme">
     </div>
   </form>
+  <a href="${pageContext.request.contextPath}/registration" class="button button_btheme">Реєстрація</a>
 
 </div>
 <!-- FOOTER -->

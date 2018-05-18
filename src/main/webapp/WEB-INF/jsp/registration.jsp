@@ -26,7 +26,7 @@
 
     <div class="main">
 
-        <form action="/demo/add">
+        <form action="${pageContext.request.contextPath}/add">
             <div class="form-fild">
                 <label for="name">Ім'я</label>
                 <input type="text" name="name" id="name" placeholder="Введіть ім'я">
