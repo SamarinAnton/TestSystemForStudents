@@ -1,22 +1,29 @@
 package ru.testsForStudents.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import ru.testsForStudents.UserModel;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "teachers", schema = "TestSystem")
-public class Teacher {
+public class Teacher extends UserModel{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private long id;
 
-    @Basic
-    @Column(name = "first_name", nullable = false)
-    private String firstName;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "users_id")
+    private User user;
 
-    @Basic
-    @Column(name = "last_name", nullable = false)
-    private String lastName;
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
 
     public long getId() {
         return id;
@@ -24,22 +31,6 @@ public class Teacher {
 
     public void setId(long id) {
         this.id = id;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     @Override
