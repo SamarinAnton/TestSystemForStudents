@@ -14,7 +14,7 @@ import ru.testsForStudents.service.AccountService;
 import java.util.List;
 
 @Controller
-public class HelloController {
+public class MainController {
 
     private final AccountService accountService;
     private User mUser = null;
@@ -28,7 +28,7 @@ public class HelloController {
     }
 
     @Autowired // This means to get the bean called userRepository and accountService
-    public HelloController(AccountService accountService, UserDAO userDAO) {
+    public MainController(AccountService accountService, UserDAO userDAO) {
         this.accountService = accountService;
         this.userDAO = userDAO;
     }
