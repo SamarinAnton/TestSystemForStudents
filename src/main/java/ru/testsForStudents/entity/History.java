@@ -1,14 +1,15 @@
 package ru.testsForStudents.entity;
 
+import org.springframework.data.annotation.LastModifiedDate;
+
 import javax.persistence.*;
-import java.io.Serializable;
-import java.sql.Timestamp;
+import java.util.Date;
 
 
 @Entity
 @Table(name = "history", schema = "TestSystem")
 public class History extends BaseEntity {
-    private Timestamp lastUpdate;
+    private Date lastUpdate;
     private int right;
     private int all;
 
@@ -16,13 +17,14 @@ public class History extends BaseEntity {
     private Student student;
 
 
-    @Basic
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "time", nullable = false)
-    public Timestamp getLastUpdate() {
+    @LastModifiedDate
+    public Date getLastUpdate() {
         return lastUpdate;
     }
 
-    public void setLastUpdate(Timestamp lastUpdate) {
+    public void setLastUpdate(Date lastUpdate) {
         this.lastUpdate = lastUpdate;
     }
 

@@ -21,7 +21,7 @@ public class Lesson extends BaseEntity{
 //    }
 //
     @Basic
-    @Column(name = "subject", nullable = false)
+    @Column(name = "subject", nullable = false, unique = true)
     public String getSubject() {
         return subject;
     }

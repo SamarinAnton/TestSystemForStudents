@@ -26,7 +26,7 @@
 
     <div class="main">
 
-        <form action="${pageContext.request.contextPath}/add-new-test">
+        <form action="${pageContext.request.contextPath}/tasks/add-new-test">
             <div class="form-fild">
                 <label for="subject">Тема предмета</label>
                 <input type="text" name="subject" id="subject" placeholder="Введите тему предмета">

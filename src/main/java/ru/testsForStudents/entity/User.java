@@ -19,8 +19,8 @@ public class User extends BaseEntity{
 
 
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL,
-    fetch = FetchType.LAZY, optional = false)
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, optional = false)
+    @JoinColumn(name = "users_id")
     public Student getStudent() {
         return student;
     }
@@ -35,8 +35,8 @@ public class User extends BaseEntity{
         this.student = student;
     }
 
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY, optional = false)
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, optional = false)
+    @JoinColumn(name = "users_id")
     public Teacher getTeacher() {
         return teacher;
     }
@@ -50,17 +50,6 @@ public class User extends BaseEntity{
             teacher.setUser(this);
         this.teacher = teacher;
     }
-
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "id", nullable = false)
-//    public long getId() {
-//        return id;
-//    }
-//
-//    public void setId(long id) {
-//        this.id = id;
-//    }
 
     @Basic
     @Column(name = "login", nullable = false, unique = true)

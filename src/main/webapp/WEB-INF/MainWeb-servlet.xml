@@ -14,9 +14,12 @@
     </bean>
 
     <bean class = "org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name = "prefix" >
-            <value>WEB-INF/jsp/</value>
-        </property>
+        <property name = "prefix" value="WEB-INF/jsp/"/>
+        <property name = "suffix" value = ".jsp" />
+    </bean>
+
+    <bean class = "org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name = "prefix" value="WEB-INF/tasks/"/>
         <property name = "suffix" value = ".jsp" />
     </bean>
 

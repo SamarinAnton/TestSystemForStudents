@@ -2,6 +2,7 @@ package ru.testsForStudents.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Set;
 
 @Entity
 @Table(name = "students", schema = "TestSystem")
@@ -52,6 +53,18 @@ public class Student extends UserModel{
 //        this.user = user;
 //    }
 
+    /*@OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JoinColumn(name = "users_id")
+    private Set<History> histories;
+
+    public Set<History> getHistories() {
+        return histories;
+    }
+
+    public void setHistories(Set<History> histories) {
+        this.histories = histories;
+    }
+*/
     @Override
     public String toString() {
         return "Student{" +

@@ -27,7 +27,7 @@
 
     <div class="main">
         <a href="${pageContext.request.contextPath}/administration-table" class="button ">Список результатів тестування</a>
-        <a href="#" class="button ">Створення нового тесту</a>
+        <a href="${pageContext.request.contextPath}/tasks/new-test" class="button ">Створення нового тесту</a>
         <a href="${pageContext.request.contextPath}/exit" class="button ">Вихід</a>
     
     </div>
