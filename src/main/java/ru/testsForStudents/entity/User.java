@@ -5,25 +5,62 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "users", schema = "TestSystem")
-public class User implements Serializable{
+public class User extends BaseEntity{
 
     public enum Status {STUDENT, TEACHER}
 
-    private long id;
+//    private long id;
     private String login;
     private String password;
     private Status status;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    public long getId() {
-        return id;
+    private Student student;    // may be not need
+    private Teacher teacher;    // may be not need
+
+
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL,
+    fetch = FetchType.LAZY, optional = false)
+    public Student getStudent() {
+        return student;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setStudent(Student student) {
+        if (student == null) {
+            if (this.student != null) {
+                this.student.setUser(null);
+            }
+        } else
+            student.setUser(this);
+        this.student = student;
     }
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY, optional = false)
+    public Teacher getTeacher() {
+        return teacher;
+    }
+
+    public void setTeacher(Teacher teacher) {
+        if(teacher == null){
+            if(this.teacher != null){
+                this.teacher.setUser(null);
+            }
+        } else
+            teacher.setUser(this);
+        this.teacher = teacher;
+    }
+
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Column(name = "id", nullable = false)
+//    public long getId() {
+//        return id;
+//    }
+//
+//    public void setId(long id) {
+//        this.id = id;
+//    }
 
     @Basic
     @Column(name = "login", nullable = false, unique = true)
@@ -63,6 +100,8 @@ public class User implements Serializable{
                 ", login='" + login + '\'' +
                 ", password=" + password +
                 ", status=" + status +
+                ", student=" + student +
+                ", teacher=" + teacher +
                 '}';
     }
 }

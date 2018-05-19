@@ -8,4 +8,6 @@ import ru.testsForStudents.entity.User;
 import java.util.List;
 
 public interface UserDAO extends JpaRepository<User, Long> {
+    User findUserByLogin(String login);
+    List<User> findUsersByStatus(User.Status status);
 }

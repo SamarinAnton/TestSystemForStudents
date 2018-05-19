@@ -5,21 +5,21 @@ import java.io.Serializable;
 
 @Entity
 @Table(name = "lessons", schema = "TestSystem")
-public class Lesson implements Serializable {
-    private long id;
+public class Lesson extends BaseEntity{
+//    private long id;
     private String subject;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", nullable = false)
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+//    @Column(name = "id", nullable = false)
+//    public long getId() {
+//        return id;
+//    }
+//
+//    public void setId(long id) {
+//        this.id = id;
+//    }
+//
     @Basic
     @Column(name = "subject", nullable = false)
     public String getSubject() {

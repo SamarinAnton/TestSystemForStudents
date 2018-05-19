@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+label,
+.button {
+    cursor: pointer;
+}
+
+[type="text"],
+[type="email"],
+[type="password"],
+[type="number"] {
+    border-radius: 3px;
+    border: 1px solid #ddd;
+    display: block;
+    height: 38px;
+    width: 100%;
+    margin-top: 8px;
+    padding-left: 10px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e8e8e8;
+    max-width: 840px;
+    margin: 0 auto;
+    -webkit-box-shadow: 0px 2px 1.8px 0.2px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 1.8px 0.2px rgba(0, 0, 0, 0.25);
+}
+
+.header {
+    background: #fff;
+    border-top: 2px solid #e62b1e;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    padding-bottom: 1px;
+}
+
+.header_theme {
+    background-color: #f3f3f3;
+}
+
+.main {
+    background-color: #f3f3f3;
+    padding: 40px 59px;
+}
+
+.main_theme {
+    padding-top: 20px;
+    background: #fff;
+}
+
+.form-fild {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: #252525;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.button_ytheme {
+    background-color: #ffdb4d;
+}
+
+.button_ytheme:hover {
+    transition-duration: .5s;
+    background-color: rgba(255, 219, 77, 0.8);
+}
+
+.button_btheme {
+    background: #314877;
+}
+
+.button_btheme:hover {
+    transition-duration: .5s;
+    background: rgba(49, 72, 119, 0.8);
+}
+
+.button_subject {
+    background: #5e70d4;
+}
+
+.group-test {}
+
+.task {
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.number-test {
+    border: solid 1px #dddddd;
+    display: inline-block;
+    height: 27px;
+    width: 27px;
+    position: relative;
+    line-height: 27px;
+    margin: 5px;
+    text-align: center;
+    color: black;
+    font-size: 12px;
+}
+
+.answer,
+.answer__item {
+    margin: 10px;
+}
+
+.res-table {
+    text-align: left;
+    width: 100%;
+}
+
+.res-table td {
+    padding: 10px;
+}
+
+.res-table tr:first-child {
+    border-bottom: 1px solid black;
+    font-weight: bold;
+}
+
+.footer {
+    background: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer_theme {
+    background-color: #f3f3f3;
+}

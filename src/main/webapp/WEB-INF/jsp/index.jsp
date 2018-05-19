@@ -8,11 +8,11 @@
   <meta name="keywords" content="разные, ключевые, слова">
   <link rel="shortcut icon" href="#" />
 
-  <link rel="stylesheet" href="css/fonts.css" />
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/fonts.css" />
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reset.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/normalize.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/main.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/media.css">
 
   <title>Авторизація в системі - Система тестування НАУ</title>
 </head>
@@ -20,12 +20,12 @@
 <body>
 <!-- HEADER -->
 <header class="header">
-  <h1 class="title">Авторизація в системі</h1>
+  <h1 class="title">${title}</h1>
 </header>
 
 <div class="main">
 
-  <form action="#">
+  <form action="${pageContext.request.contextPath}/verification">
     <div class="form-fild">
       <label for="login">Логін</label>
       <input type="text" name="login" id="login">
@@ -35,10 +35,10 @@
       <input type="password" name="password" id="password">
     </div>
     <div class="form-fild">
-      <a href="#" class="button button_ytheme">Вхід</a>
-      <a href="./registration.html" class="button button_btheme">Реєстрація</a>
+      <input type="submit" value="Вхід" class="button button_ytheme">
     </div>
   </form>
+  <a href="${pageContext.request.contextPath}/registration" class="button button_btheme">Реєстрація</a>
 
 </div>
 <!-- FOOTER -->

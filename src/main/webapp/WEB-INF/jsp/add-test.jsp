@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,24 +9,24 @@
     <meta name="keywords" content="разные, ключевые, слова">
     <link rel="shortcut icon" href="#" />
 
-    <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/fonts.css" />
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/reset.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/normalize.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/main.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/media.css">
 
-    <title>Реєстрація в системі в системі - Система тестування НАУ</title>
+    <title>Добавление новых тестов</title>
 </head>
 
 <body>
     <!-- HEADER -->
     <header class="header">
-        <h1 class="title">Реєстрація в системі</h1>
+        <h1 class="title">Добавление новых тестов</h1>
     </header>
 
     <div class="main">
 
-        <form action="/demo/add">
+        <form action="${pageContext.request.contextPath}/add-new-test">
             <div class="form-fild">
                 <label for="name">Ім'я</label>
                 <input type="text" name="name" id="name" placeholder="Введіть ім'я">
