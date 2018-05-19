@@ -80,6 +80,8 @@
 
         <a href="#" class="button">Відповісти</a>
 
+        <a href="${pageContext.request.contextPath}/exit">Выход</a>
+
     </div>
     <!-- FOOTER -->
     <footer class="footer footer_theme">

@@ -28,31 +28,23 @@
 
         <form action="${pageContext.request.contextPath}/add-new-test">
             <div class="form-fild">
-                <label for="name">Ім'я</label>
-                <input type="text" name="name" id="name" placeholder="Введіть ім'я">
+                <label for="subject">Тема предмета</label>
+                <input type="text" name="subject" id="subject" placeholder="Введите тему предмета">
             </div>
             <div class="form-fild">
-                <label for="surname">Прізвище</label>
-                <input type="text" name="surname" id="surname" placeholder="Введіть прізвище">
+                <label for="condition">Прізвище</label>
+                <input type="text" name="condition" id="condition" placeholder="Введите условия теста">
             </div>
             <div class="form-fild">
-                <label for="group">Група</label>
-                <input type="number" name="group" id="group" placeholder="Введіть номер групи">
+                <label for="answer">Група</label>
+                <input type="text" name="answer" id="answer" placeholder="Введите правильный ответ на вопрос">
             </div>
             <div class="form-fild">
-                <label for="group">Группа</label>
-                <input type="text" name="groupUser" id="groupUser" placeholder="Введите вашу категорию группы">
+                <label for="option">Группа</label>
+                <input type="text" name="option" id="option" placeholder="Введите ответы на вопрос">
             </div>
             <div class="form-fild">
-                <label for="login">Логін</label>
-                <input type="text" name="login" id="login" placeholder="Введіть введіть логін">
-            </div>
-            <div class="form-fild">
-                <label for="password">Пароль</label>
-                <input type="password" name="password" id="password" placeholder="Введіть пароль">
-            </div>
-            <div class="form-fild">
-                <button type="submit" value="Submit" class="button button_ytheme">Зберегти</button>
+                <button type="submit" value="Submit" class="button button_ytheme">Добавить тест</button>
             </div>
         </form>
 

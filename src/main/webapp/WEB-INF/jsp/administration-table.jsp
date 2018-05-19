@@ -35,7 +35,7 @@
                 </tr>
             <c:forEach items="${studentList}" var="student">
                 <tr>
-                    <th>${student.login}</th>
+                    <th>${student.lastName} ${student.firstName}</th>
                     <th>85</th>
                 </tr>
             </c:forEach>
