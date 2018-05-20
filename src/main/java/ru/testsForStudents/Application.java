@@ -13,3 +13,7 @@ public class Application {
     }
 
 }
+
+//1)To watch mapped objects in entities
+//2)To write right methods in DAO layer
+//3)When we will make (1) To watch mapped objects in DTO layers
